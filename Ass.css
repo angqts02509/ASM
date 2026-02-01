@@ -1,0 +1,290 @@
+/* ================= ANIMATION ================= */
+@keyframes fadeInSlide {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes Animation {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+  z-index: 1000;
+}
+
+/* Logo */
+.logo img {
+  height: 80px;
+}
+
+/* Menu */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+/* Gạch vàng dưới menu */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 3px;
+  background: #ffcc00;
+  transition: 0.3s;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 100%;
+}
+
+/* Search */
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.search-box input {
+  padding: 6px 12px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+}
+
+
+/* Logo */
+.logo img {
+  height: 80px;
+}
+/* ================= BODY & BACKGROUND ================= */
+body {
+  padding-top: 60px;
+  background-color: #ffffff;
+  background-image:
+    linear-gradient(
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.6)
+    ),
+    url("Pic/BackGround.jpg");
+  background-size: 50%;
+  animation: Animation 15s linear infinite;
+}
+
+/* ================= TEXT ================= */
+h1 {
+  font-size: 3em;
+  color: #ffffff;
+  animation: fadeInSlide 1s ease-out forwards;
+  text-align: center;
+}
+
+p {
+  font-family: serif;
+}
+
+/* ================= CENTER BOX ================= */
+.center-box {
+  position: relative;
+  margin: 120px auto 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.65);
+  padding: 30px 60px;
+  border-radius: 12px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+  width: fit-content;
+}
+
+.center-box .title {
+  margin: 0 0 20px 0;
+  font-size: 2.8em;
+  color: #fff;
+  text-align: center;
+}
+
+/* ================= MOVIE LIST ================= */
+.movie-row {
+  display: flex;
+  gap: 150px;
+}
+
+.movie-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 160px;
+}
+
+.movie-img {
+  width: 150px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.movie-title {
+  margin-top: 8px;
+  font-size: 1em;
+  color: #fff;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.video-container{
+  position: relative;
+  margin: 120px auto 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.65);
+  padding: 30px 60px;
+  border-radius: 12px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+  width: fit-content;  
+}
+
+
+/* ================= VIP SECTION ================= */
+.vip-section {
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.95),
+    rgba(0,0,0,0.85)
+  );
+  padding: 80px 40px;
+  text-align: center;
+  color: #fff;
+  margin-top: 120px;
+}
+
+.vip-title {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+.vip-subtitle {
+  color: #ccc;
+  margin-bottom: 50px;
+}
+
+/* ================= VIP TABLE ================= */
+.vip-table {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.vip-card {
+  background: rgba(30,30,30,0.95);
+  border-radius: 12px;
+  padding: 30px 25px;
+  width: 280px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.vip-card:hover {
+  transform: translateY(-10px);
+}
+
+.vip-card h3 {
+  font-size: 1.5em;
+  margin-bottom: 15px;
+}
+
+.price {
+  font-size: 2.2em;
+  color: #ffcc00;
+  margin-bottom: 20px;
+}
+
+.vip-card ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 25px;
+}
+
+.vip-card ul li {
+  margin: 10px 0;
+}
+
+.vip-card button {
+  background: #ffcc00;
+  color: #000;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1em;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.vip-card button:hover {
+  background: #ffaa00;
+}
+
+/* ================= HOT VIP ================= */
+.vip-card.hot {
+  border: 2px solid #ffcc00;
+}
+
+.hot-badge {
+  position: absolute;
+  top: -12px;
+  right: -12px;
+  background: #ff0000;
+  color: #fff;
+  padding: 5px 12px;
+  font-size: 0.8em;
+  border-radius: 20px;
+}
+
+/* ================= FOOTER ================= */
+footer {
+  display: flex;
+}
+
+
+

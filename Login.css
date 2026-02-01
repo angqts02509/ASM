@@ -1,0 +1,136 @@
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ================= BODY + BACKGROUND ================= */
+body {
+  height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  background:
+    linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
+    url("Pic/BackGround.jpg") center / cover no-repeat;
+  animation: bgMove 40s linear infinite;
+  overflow: hidden;
+}
+
+/* Background animation */
+@keyframes bgMove {
+  0%   { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+/* ================= WRAPPER ================= */
+.login-wrapper {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ================= LOGIN BOX ================= */
+.login-box {
+  width: 420px;
+  padding: 50px 40px;
+  background: rgba(0,0,0,0.85);
+  border-radius: 8px;
+  color: #fff;
+}
+
+/* ================= TITLE ================= */
+.login-box h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* ================= INPUT ================= */
+.login-box input {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 15px;
+  background: #333;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 1em;
+}
+
+.login-box input::placeholder {
+  color: #aaa;
+}
+
+/* ================= BUTTON ================= */
+.login-box button {
+  width: 100%;
+  padding: 14px;
+  background: #e50914;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.1em;
+  color: #fff;
+  cursor: pointer;
+}
+
+.login-box button:hover {
+  background: #f6121d;
+}
+
+/* ================= OPTIONS ================= */
+.login-options {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9em;
+  color: #bbb;
+}
+
+/* Remember checkbox */
+.remember {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.remember input {
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  accent-color: #e50914;
+}
+
+.remember span {
+  position: relative;
+  top: 1px;
+}
+
+/* Links */
+.login-options a {
+  color: #bbb;
+  text-decoration: none;
+}
+
+.login-options a:hover {
+  text-decoration: underline;
+}
+
+/* ================= REGISTER ================= */
+.register {
+  margin-top: 25px;
+  font-size: 0.9em;
+  color: #aaa;
+}
+
+.register a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.register a:hover {
+  text-decoration: underline;
+}
