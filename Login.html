@@ -13,10 +13,10 @@
 
       <h1>Đăng nhập</h1>
 
-      <input type="text" placeholder="Email hoặc số điện thoại">
-      <input type="password" placeholder="Mật khẩu">
+      <input type="text" id="ThayBayDepTrai" placeholder="Tên người dùng">
+      <input type="password" id="ThayChoEmXin5Diem" placeholder="Mật khẩu">
 
-      <button>Đăng nhập</button>
+      <button onclick="login()">Đăng nhập</button>
 
       <div class="login-options">
         <label class="remember">
@@ -33,6 +33,18 @@
 
     </div>
   </div>
+
+  <script>
+    function login() {
+      const user = document.getElementById("ThayBayDepTrai").value.trim();
+      const pass = document.getElementById("ThayChoEmXin5Diem").value.trim();
+      if (user === "" || pass === "") {
+        alert("Vui lòng nhập đầy đủ thông tin!");
+        return;
+      }
+      window.location.href = "index.html";
+    }
+  </script>
 
 </body>
 </html>
